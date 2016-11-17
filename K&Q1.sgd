@@ -1,0 +1,2460 @@
+[
+ObjTp=FSgntr
+Sgntr=SGD
+RelVrs=1
+VTProeVer=6.0.02
+Schema=1
+CRCGUID=CB33AA88-E754-4300-B4DF-1C0ED4E33704
+]
+;================================================================================
+[
+ObjTp=Hd
+ProjectFile=K&Q1.vtp
+VtpGuid=D2861938-E426-4465-8EEA-6CCEF9B9DC7F
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Audio Buttons - Heineken Bar_Audio_Select_HeinekenBar.ced
+Hint=Audio_Select_HeinekenBar (Smart Object ID=1)
+Code=1
+GUID=AB5D3401-B875-40E1-A4C6-CF6EC80776AA
+SmplCName=K&Q1_Audio Buttons - Heineken Bar_Audio_Select_HeinekenBar.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=10
+MaxVariableInputs=10
+MinVariableOutputs=10
+MaxVariableOutputs=10
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=10
+MaxVariableInputsList3=10
+MinVariableOutputsList3=10
+MaxVariableOutputsList3=10
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputCue7=Item 7 Checked
+InputSigType7=Digital
+OutputCue7=Item 7 Checked
+OutputSigType7=Digital
+InputCue8=Item 8 Checked
+InputSigType8=Digital
+OutputCue8=Item 8 Checked
+OutputSigType8=Digital
+InputCue9=Item 9 Checked
+InputSigType9=Digital
+OutputCue9=Item 9 Checked
+OutputSigType9=Digital
+InputCue10=Item 10 Checked
+InputSigType10=Digital
+OutputCue10=Item 10 Checked
+OutputSigType10=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+InputList3Cue7=Item 7 Text
+InputList3SigType7=Serial
+OutputList3Cue7=[~UNUSED3~]
+OutputList3SigType7=Serial
+InputList3Cue8=Item 8 Text
+InputList3SigType8=Serial
+OutputList3Cue8=[~UNUSED3~]
+OutputList3SigType8=Serial
+InputList3Cue9=Item 9 Text
+InputList3SigType9=Serial
+OutputList3Cue9=[~UNUSED3~]
+OutputList3SigType9=Serial
+InputList3Cue10=Item 10 Text
+InputList3SigType10=Serial
+OutputList3Cue10=[~UNUSED3~]
+OutputList3SigType10=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=1
+CedH=1
+SmartObjId=1d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=1
+Tp=1
+HD=TRUE
+DV=1d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=1
+Name=K&Q1_Audio Buttons - Heineken Bar_Audio_Select_HeinekenBar.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Audio Buttons - Main Bar_Audio_Select_MainBarPool.ced
+Hint=Audio_Select_MainBarPool (Smart Object ID=2)
+Code=2
+GUID=CCFB5A47-A97A-4FEB-B0B6-8E6D52394399
+SmplCName=K&Q1_Audio Buttons - Main Bar_Audio_Select_MainBarPool.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=10
+MaxVariableInputs=10
+MinVariableOutputs=10
+MaxVariableOutputs=10
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=10
+MaxVariableInputsList3=10
+MinVariableOutputsList3=10
+MaxVariableOutputsList3=10
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputCue7=Item 7 Checked
+InputSigType7=Digital
+OutputCue7=Item 7 Checked
+OutputSigType7=Digital
+InputCue8=Item 8 Checked
+InputSigType8=Digital
+OutputCue8=Item 8 Checked
+OutputSigType8=Digital
+InputCue9=Item 9 Checked
+InputSigType9=Digital
+OutputCue9=Item 9 Checked
+OutputSigType9=Digital
+InputCue10=Item 10 Checked
+InputSigType10=Digital
+OutputCue10=Item 10 Checked
+OutputSigType10=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+InputList3Cue7=Item 7 Text
+InputList3SigType7=Serial
+OutputList3Cue7=[~UNUSED3~]
+OutputList3SigType7=Serial
+InputList3Cue8=Item 8 Text
+InputList3SigType8=Serial
+OutputList3Cue8=[~UNUSED3~]
+OutputList3SigType8=Serial
+InputList3Cue9=Item 9 Text
+InputList3SigType9=Serial
+OutputList3Cue9=[~UNUSED3~]
+OutputList3SigType9=Serial
+InputList3Cue10=Item 10 Text
+InputList3SigType10=Serial
+OutputList3Cue10=[~UNUSED3~]
+OutputList3SigType10=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=2
+CedH=2
+SmartObjId=2d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=2
+Tp=1
+HD=TRUE
+DV=2d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=2
+Name=K&Q1_Audio Buttons - Main Bar_Audio_Select_MainBarPool.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Audio Buttons - Screen South_Audio_Select_ScreenSouth.ced
+Hint=Audio_Select_ScreenSouth (Smart Object ID=4)
+Code=3
+GUID=4F11F7DB-819B-4A6E-968E-FCF6FCFFDC98
+SmplCName=K&Q1_Audio Buttons - Screen South_Audio_Select_ScreenSouth.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=10
+MaxVariableInputs=10
+MinVariableOutputs=10
+MaxVariableOutputs=10
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=10
+MaxVariableInputsList3=10
+MinVariableOutputsList3=10
+MaxVariableOutputsList3=10
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputCue7=Item 7 Checked
+InputSigType7=Digital
+OutputCue7=Item 7 Checked
+OutputSigType7=Digital
+InputCue8=Item 8 Checked
+InputSigType8=Digital
+OutputCue8=Item 8 Checked
+OutputSigType8=Digital
+InputCue9=Item 9 Checked
+InputSigType9=Digital
+OutputCue9=Item 9 Checked
+OutputSigType9=Digital
+InputCue10=Item 10 Checked
+InputSigType10=Digital
+OutputCue10=Item 10 Checked
+OutputSigType10=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+InputList3Cue7=Item 7 Text
+InputList3SigType7=Serial
+OutputList3Cue7=[~UNUSED3~]
+OutputList3SigType7=Serial
+InputList3Cue8=Item 8 Text
+InputList3SigType8=Serial
+OutputList3Cue8=[~UNUSED3~]
+OutputList3SigType8=Serial
+InputList3Cue9=Item 9 Text
+InputList3SigType9=Serial
+OutputList3Cue9=[~UNUSED3~]
+OutputList3SigType9=Serial
+InputList3Cue10=Item 10 Text
+InputList3SigType10=Serial
+OutputList3Cue10=[~UNUSED3~]
+OutputList3SigType10=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=3
+CedH=3
+SmartObjId=4d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=3
+Tp=1
+HD=TRUE
+DV=4d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=3
+Name=K&Q1_Audio Buttons - Screen South_Audio_Select_ScreenSouth.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Audio Buttons - Screen North_Audio_Select_ScreenNorth.ced
+Hint=Audio_Select_ScreenNorth (Smart Object ID=3)
+Code=4
+GUID=F7B5F547-68AF-49C8-9FB9-33D377ADF4D4
+SmplCName=K&Q1_Audio Buttons - Screen North_Audio_Select_ScreenNorth.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=10
+MaxVariableInputs=10
+MinVariableOutputs=10
+MaxVariableOutputs=10
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=10
+MaxVariableInputsList3=10
+MinVariableOutputsList3=10
+MaxVariableOutputsList3=10
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputCue7=Item 7 Checked
+InputSigType7=Digital
+OutputCue7=Item 7 Checked
+OutputSigType7=Digital
+InputCue8=Item 8 Checked
+InputSigType8=Digital
+OutputCue8=Item 8 Checked
+OutputSigType8=Digital
+InputCue9=Item 9 Checked
+InputSigType9=Digital
+OutputCue9=Item 9 Checked
+OutputSigType9=Digital
+InputCue10=Item 10 Checked
+InputSigType10=Digital
+OutputCue10=Item 10 Checked
+OutputSigType10=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+InputList3Cue7=Item 7 Text
+InputList3SigType7=Serial
+OutputList3Cue7=[~UNUSED3~]
+OutputList3SigType7=Serial
+InputList3Cue8=Item 8 Text
+InputList3SigType8=Serial
+OutputList3Cue8=[~UNUSED3~]
+OutputList3SigType8=Serial
+InputList3Cue9=Item 9 Text
+InputList3SigType9=Serial
+OutputList3Cue9=[~UNUSED3~]
+OutputList3SigType9=Serial
+InputList3Cue10=Item 10 Text
+InputList3SigType10=Serial
+OutputList3Cue10=[~UNUSED3~]
+OutputList3SigType10=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=4
+CedH=4
+SmartObjId=3d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=4
+Tp=1
+HD=TRUE
+DV=3d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=4
+Name=K&Q1_Audio Buttons - Screen North_Audio_Select_ScreenNorth.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Audio Buttons - Function Room_Audio_Select_FunctionRoom.ced
+Hint=Audio_Select_FunctionRoom (Smart Object ID=5)
+Code=5
+GUID=46741081-3FB2-4EC8-8B02-6FF99F1ACE49
+SmplCName=K&Q1_Audio Buttons - Function Room_Audio_Select_FunctionRoom.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=10
+MaxVariableInputs=10
+MinVariableOutputs=10
+MaxVariableOutputs=10
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=10
+MaxVariableInputsList3=10
+MinVariableOutputsList3=10
+MaxVariableOutputsList3=10
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputCue7=Item 7 Checked
+InputSigType7=Digital
+OutputCue7=Item 7 Checked
+OutputSigType7=Digital
+InputCue8=Item 8 Checked
+InputSigType8=Digital
+OutputCue8=Item 8 Checked
+OutputSigType8=Digital
+InputCue9=Item 9 Checked
+InputSigType9=Digital
+OutputCue9=Item 9 Checked
+OutputSigType9=Digital
+InputCue10=Item 10 Checked
+InputSigType10=Digital
+OutputCue10=Item 10 Checked
+OutputSigType10=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+InputList3Cue7=Item 7 Text
+InputList3SigType7=Serial
+OutputList3Cue7=[~UNUSED3~]
+OutputList3SigType7=Serial
+InputList3Cue8=Item 8 Text
+InputList3SigType8=Serial
+OutputList3Cue8=[~UNUSED3~]
+OutputList3SigType8=Serial
+InputList3Cue9=Item 9 Text
+InputList3SigType9=Serial
+OutputList3Cue9=[~UNUSED3~]
+OutputList3SigType9=Serial
+InputList3Cue10=Item 10 Text
+InputList3SigType10=Serial
+OutputList3Cue10=[~UNUSED3~]
+OutputList3SigType10=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=5
+CedH=5
+SmartObjId=5d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=5
+Tp=1
+HD=TRUE
+DV=5d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=5
+Name=K&Q1_Audio Buttons - Function Room_Audio_Select_FunctionRoom.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - North TV_Video_Select_MBarNorthTV.ced
+Hint=Video_Select_MBarNorthTV (Smart Object ID=15)
+Code=6
+GUID=4BD90F15-D371-4BBB-920A-D47C56604CD7
+SmplCName=K&Q1_Video Buttons - Main Bar - North TV_Video_Select_MBarNorthTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=6
+CedH=6
+SmartObjId=15d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=6
+Tp=1
+HD=TRUE
+DV=15d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=6
+Name=K&Q1_Video Buttons - Main Bar - North TV_Video_Select_MBarNorthTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - South TV_Video_Select_MBarSouthTV.ced
+Hint=Video_Select_MBarSouthTV (Smart Object ID=16)
+Code=7
+GUID=45C56697-C063-4C2E-854E-2AA46454EB36
+SmplCName=K&Q1_Video Buttons - Main Bar - South TV_Video_Select_MBarSouthTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=7
+CedH=7
+SmartObjId=16d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=7
+Tp=1
+HD=TRUE
+DV=16d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=7
+Name=K&Q1_Video Buttons - Main Bar - South TV_Video_Select_MBarSouthTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - Pilar North TV_Video_Select_MBarPilarNorthTV.ced
+Hint=Video_Select_MBarPilarNorthTV (Smart Object ID=17)
+Code=8
+GUID=CA089729-6AB8-40E8-B01C-FF5DFAC3418B
+SmplCName=K&Q1_Video Buttons - Main Bar - Pilar North TV_Video_Select_MBarPilarNorthTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=8
+CedH=8
+SmartObjId=17d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=8
+Tp=1
+HD=TRUE
+DV=17d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=8
+Name=K&Q1_Video Buttons - Main Bar - Pilar North TV_Video_Select_MBarPilarNorthTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - Pilar South TV_Video_Select_MBarPilarSouthTV.ced
+Hint=Video_Select_MBarPilarSouthTV (Smart Object ID=18)
+Code=9
+GUID=1CAF6C87-A35A-43F9-98C1-DA7BBDEEEE22
+SmplCName=K&Q1_Video Buttons - Main Bar - Pilar South TV_Video_Select_MBarPilarSouthTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=9
+CedH=9
+SmartObjId=18d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=9
+Tp=1
+HD=TRUE
+DV=18d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=9
+Name=K&Q1_Video Buttons - Main Bar - Pilar South TV_Video_Select_MBarPilarSouthTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - Pool Area TV_Video_Select_MBarPoolTV.ced
+Hint=Video_Select_MBarPoolTV (Smart Object ID=19)
+Code=10
+GUID=BD9D9477-E660-4092-88B2-65C21C3D4E31
+SmplCName=K&Q1_Video Buttons - Main Bar - Pool Area TV_Video_Select_MBarPoolTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=10
+CedH=10
+SmartObjId=19d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=10
+Tp=1
+HD=TRUE
+DV=19d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=10
+Name=K&Q1_Video Buttons - Main Bar - Pool Area TV_Video_Select_MBarPoolTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - Under Mezz TV_Video_Select_MBarUnderMezzTV.ced
+Hint=Video_Select_MBarUnderMezzTV (Smart Object ID=20)
+Code=11
+GUID=8A32B044-92C2-4BBC-909E-026ADC16360D
+SmplCName=K&Q1_Video Buttons - Main Bar - Under Mezz TV_Video_Select_MBarUnderMezzTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=11
+CedH=11
+SmartObjId=20d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=11
+Tp=1
+HD=TRUE
+DV=20d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=11
+Name=K&Q1_Video Buttons - Main Bar - Under Mezz TV_Video_Select_MBarUnderMezzTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - North Projector_Video_Select_MBarNorthProj.ced
+Hint=Video_Select_MBarNorthProj (Smart Object ID=21)
+Code=12
+GUID=A09F1949-10D1-44E3-8C33-42A26056A976
+SmplCName=K&Q1_Video Buttons - Main Bar - North Projector_Video_Select_MBarNorthProj.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=12
+CedH=12
+SmartObjId=21d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=12
+Tp=1
+HD=TRUE
+DV=21d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=12
+Name=K&Q1_Video Buttons - Main Bar - North Projector_Video_Select_MBarNorthProj.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Main Bar - South Projector_Video_Select_MBarSouthProj.ced
+Hint=Video_Select_MBarSouthProj (Smart Object ID=22)
+Code=13
+GUID=2F6BC146-E730-4C5A-8027-3DE28EF9CB4B
+SmplCName=K&Q1_Video Buttons - Main Bar - South Projector_Video_Select_MBarSouthProj.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=13
+CedH=13
+SmartObjId=22d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=13
+Tp=1
+HD=TRUE
+DV=22d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=13
+Name=K&Q1_Video Buttons - Main Bar - South Projector_Video_Select_MBarSouthProj.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Heineken Bar - North TV_Video_Select_HBarNorthTV.ced
+Hint=Video_Select_HBarNorthTV (Smart Object ID=23)
+Code=14
+GUID=9CD501AB-BE28-4514-ACA8-94A2A1183C8A
+SmplCName=K&Q1_Video Buttons - Heineken Bar - North TV_Video_Select_HBarNorthTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=14
+CedH=14
+SmartObjId=23d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=14
+Tp=1
+HD=TRUE
+DV=23d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=14
+Name=K&Q1_Video Buttons - Heineken Bar - North TV_Video_Select_HBarNorthTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Heineken Bar - South TV_Video_Select_HBarSouthTV.ced
+Hint=Video_Select_HBarSouthTV (Smart Object ID=24)
+Code=15
+GUID=89E52D65-CFEF-40A7-B349-4E7541F93F64
+SmplCName=K&Q1_Video Buttons - Heineken Bar - South TV_Video_Select_HBarSouthTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=15
+CedH=15
+SmartObjId=24d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=15
+Tp=1
+HD=TRUE
+DV=24d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=15
+Name=K&Q1_Video Buttons - Heineken Bar - South TV_Video_Select_HBarSouthTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Heineken Bar - Main TV_Video_Select_HBarMainTV.ced
+Hint=Video_Select_HBarMainTV (Smart Object ID=25)
+Code=16
+GUID=F9F9C464-1F6F-4937-A43F-ABC3568BEF82
+SmplCName=K&Q1_Video Buttons - Heineken Bar - Main TV_Video_Select_HBarMainTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=16
+CedH=16
+SmartObjId=25d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=16
+Tp=1
+HD=TRUE
+DV=25d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=16
+Name=K&Q1_Video Buttons - Heineken Bar - Main TV_Video_Select_HBarMainTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Outdoor TV_Video_Select_OutdoorTV.ced
+Hint=Video_Select_OutdoorTV (Smart Object ID=26)
+Code=17
+GUID=B03EDF9F-1090-4FE7-8E87-5B631B93E01D
+SmplCName=K&Q1_Video Buttons - Outdoor TV_Video_Select_OutdoorTV.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=17
+CedH=17
+SmartObjId=26d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=17
+Tp=1
+HD=TRUE
+DV=26d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=17
+Name=K&Q1_Video Buttons - Outdoor TV_Video_Select_OutdoorTV.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]
+;================================================================================
+[
+ObjTp=Symbol
+Name=K&Q1_Video Buttons - Function Room Projector_Video_Select_FunctionProj.ced
+Hint=Video_Select_FunctionProj (Smart Object ID=27)
+Code=18
+GUID=86A1982F-F714-423A-B010-8B45C3D9085D
+SmplCName=K&Q1_Video Buttons - Function Room Projector_Video_Select_FunctionProj.ced
+SMWRev=4.02.19
+Expand=expand_random
+HelpID=10000
+;Define the number of inputs, outputs and parameters
+MinVariableInputs=6
+MaxVariableInputs=6
+MinVariableOutputs=6
+MaxVariableOutputs=6
+NumFixedParams=1
+MinVariableInputsList2=6
+MaxVariableInputsList2=6
+MinVariableOutputsList2=6
+MaxVariableOutputsList2=6
+MinVariableInputsList3=6
+MaxVariableInputsList3=6
+MinVariableOutputsList3=6
+MaxVariableOutputsList3=6
+;Define the cues, and signal types  each input, output and parameter.
+InputCue1=Item 1 Checked
+InputSigType1=Digital
+OutputCue1=Item 1 Checked
+OutputSigType1=Digital
+InputCue2=Item 2 Checked
+InputSigType2=Digital
+OutputCue2=Item 2 Checked
+OutputSigType2=Digital
+InputCue3=Item 3 Checked
+InputSigType3=Digital
+OutputCue3=Item 3 Checked
+OutputSigType3=Digital
+InputCue4=Item 4 Checked
+InputSigType4=Digital
+OutputCue4=Item 4 Checked
+OutputSigType4=Digital
+InputCue5=Item 5 Checked
+InputSigType5=Digital
+OutputCue5=Item 5 Checked
+OutputSigType5=Digital
+InputCue6=Item 6 Checked
+InputSigType6=Digital
+OutputCue6=Item 6 Checked
+OutputSigType6=Digital
+InputList2Cue1=Select Item
+InputList2SigType1=Analog
+OutputList2Cue1=[~UNUSED3~]
+OutputList2SigType1=Analog
+InputList2Cue2=Deselect Item
+InputList2SigType2=Analog
+OutputList2Cue2=[~UNUSED3~]
+OutputList2SigType2=Analog
+InputList2Cue3=Scroll Item
+InputList2SigType3=Analog
+OutputList2Cue3=[~UNUSED3~]
+OutputList2SigType3=Analog
+InputList2Cue4=[~UNUSED3~]
+InputList2SigType4=Analog
+OutputList2Cue4=Item Clicked
+OutputList2SigType4=Analog
+InputList2Cue5=[~UNUSED3~]
+InputList2SigType5=Analog
+OutputList2Cue5=Item Held
+OutputList2SigType5=Analog
+InputList2Cue6=Set Num of Items
+InputList2SigType6=Analog
+OutputList2Cue6=[~UNUSED3~]
+OutputList2SigType6=Analog
+InputList3Cue1=Item 1 Text
+InputList3SigType1=Serial
+OutputList3Cue1=[~UNUSED3~]
+OutputList3SigType1=Serial
+InputList3Cue2=Item 2 Text
+InputList3SigType2=Serial
+OutputList3Cue2=[~UNUSED3~]
+OutputList3SigType2=Serial
+InputList3Cue3=Item 3 Text
+InputList3SigType3=Serial
+OutputList3Cue3=[~UNUSED3~]
+OutputList3SigType3=Serial
+InputList3Cue4=Item 4 Text
+InputList3SigType4=Serial
+OutputList3Cue4=[~UNUSED3~]
+OutputList3SigType4=Serial
+InputList3Cue5=Item 5 Text
+InputList3SigType5=Serial
+OutputList3Cue5=[~UNUSED3~]
+OutputList3SigType5=Serial
+InputList3Cue6=Item 6 Text
+InputList3SigType6=Serial
+OutputList3Cue6=[~UNUSED3~]
+OutputList3SigType6=Serial
+ParamCue1=SmartObjectId
+ParamSigType1=Constant
+MPp=1
+Pp1=18
+CedH=18
+SmartObjId=27d
+]
+; Parameter Properties for Smart Object ID
+[
+ObjTp=Dp
+H=18
+Tp=1
+HD=TRUE
+DV=27d
+NF=1
+DNF=1
+EncFmt=0
+DVLF=1
+Sgn=0
+]
+; Smart Objects Definition section
+[
+ObjTp=CED
+H=18
+Name=K&Q1_Video Buttons - Function Room Projector_Video_Select_FunctionProj.ced
+;Cedver is the version of the Smart Graphics control, not the CED file format.
+;If the control definition changes, increment this.
+CedVer=1
+]

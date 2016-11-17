@@ -1,0 +1,406 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:	Crestron Electronics, Inc.
+System Name:
+System Number:
+Programmer:		PAC
+Comments:
+*/
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+#SYMBOL_NAME "BSS SoundWeb London Matrix Mixer Drive v5.4"
+// #HINT ""
+#DEFINE_CONSTANT MAXOUTPUT   48
+#DEFINE_CONSTANT MAXOUTPUTx2 96
+// #CATEGORY "" 
+#DEFAULT_VOLATILE
+// #DEFAULT_NONVOLATILE
+#ANALOG_SERIAL_EXPAND INPUTSWITHOUTPUTS 
+#DIGITAL_EXPAND INPUTSWITHOUTPUTS
+#HELP_PDF_FILE "bss soundweb london matrix mixer help.pdf"
+#ENABLE_STACK_CHECKING
+
+#HELP_BEGIN
+	version 5.4
+	see help file bss soundweb london matrix mixer help.pdf
+#HELP_END
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT _skip_,_skip_, subscribe$; 
+DIGITAL_INPUT unSubscribe$;
+DIGITAL_INPUT _skip_, output_mute$[MAXOUTPUT];
+ANALOG_INPUT _skip_, input$;
+BUFFER_INPUT _skip_, rx$[4000];
+ANALOG_INPUT _skip_, output_gain$[MAXOUTPUT];
+
+DIGITAL_OUTPUT _skip_,_skip_,_skip_,_skip_,_skip_, output_mute_fb$[MAXOUTPUT];
+STRING_OUTPUT _skip_,_skip_,_skip_, tx$;
+ANALOG_OUTPUT _skip_, output_gain_fb$[MAXOUTPUT];
+/*******************************************************************************************
+  Parameters
+  (Uncomment and declare parameters as needed)
+*******************************************************************************************/
+STRING_PARAMETER ObjectID$[3];
+INTEGER_PARAMETER iMAXOUTPUT;
+/*******************************************************************************************
+  Parameter Properties
+  (Uncomment and declare parameter properties as needed)
+*******************************************************************************************/
+#BEGIN_PARAMETER_PROPERTIES ObjectID$   
+   propValidUnits = unitString;
+   propDefaultUnit = unitString;
+   //propBounds = lower_bound , upper_bound;
+   propDefaultValue = "\x00\x01\x00"; 
+
+   propShortDescription = "HiQnet Object ID in 3-byte **HEX** ie\x00\x01\x00";
+   #BEGIN_PROP_FULL_DESCRIPTION  
+    "SEE HELP FILE"
+   #END_PROP_FULL_DESCRIPTION
+   // #BEGIN_PROP_NOTES line_1...  line_2...  line_n  #END_PROP_NOTES
+#END_PARAMETER_PROPERTIES 
+
+#BEGIN_PARAMETER_PROPERTIES iMAXOUTPUT   
+   propValidUnits = unitDecimal;
+   propDefaultUnit = unitDecimal;
+   propBounds = 1d , 48d;
+   propDefaultValue = 1d; 
+   
+   #BEGIN_PROP_FULL_DESCRIPTION  
+    "SEE HELP FILE"
+   #END_PROP_FULL_DESCRIPTION
+   // #BEGIN_PROP_NOTES line_1...  line_2...  line_n  #END_PROP_NOTES
+#END_PARAMETER_PROPERTIES
+/*******************************************************************************************
+  Global Variables
+  (Uncomment and declare global variables as needed)
+  Note:  Be sure to initialize all declared STRING variables as needed
+         For example, in Function Main: myString = "";
+*******************************************************************************************/
+INTEGER i, volumeOutput[MAXOUTPUT], volume, input, iTempNum, iMarker1;
+STRING returnString[4];
+INTEGER returnI,subscribe;
+INTEGER xOkGain[MAXOUTPUT], xOKSubscribe;
+STRING tempString[40], sTempSend[100], sObjectIDPadded[10], sNode[6];
+INTEGER stateVarOnOff, stateVarGain, stateVarSub, stateVarReceive, x;
+/*******************************************************************************************
+  Functions
+  (Add any additional functions here)
+  Note:  Functions must be physically placed before the location in
+         the code that calls them.
+*******************************************************************************************/
+String_Function send(STRING str1)
+{        
+	INTEGER checksum;
+	STRING fsTempReturn[100], sendString[100];
+	
+	checksum = 0;
+	sendString = "";
+	for (i = 1 to len(str1))                                                               
+	{             
+		checksum = checksum ^ byte(str1, i);
+		if (byte(str1, i) = 2 || byte(str1, i) = 3 || byte(str1, i) = 6 || byte(str1, i) = 21 || byte(str1, i) = 27)
+		{     
+			makeString(sendString, "%s\x1B%s", sendString, chr(byte(str1, i) + 128));
+		}               
+		else
+		{
+			makeString(sendString, "%s%s", sendString, chr(byte(str1, i)));
+		}
+	}                  
+	if (checksum = 2 || checksum = 3 || checksum = 6 || checksum = 21 || checksum = 27)
+	{
+		makeString(fsTempReturn, "\x02%s\x1B%s\x03", sendString, chr(checksum+128));
+	}
+	else
+	{                                      
+		makeString(fsTempReturn, "\x02%s%s\x03", sendString, chr(checksum));
+	}
+	return(fsTempReturn);
+}
+
+String_Function iToVolumePercent(INTEGER int)
+{                 
+	// number from 0 - 65535  
+	volume = (int*100)/65535;                            
+	returnString = "\x00" + chr(volume) + "\x00\x00";
+    Return (returnString);
+
+}
+
+Integer_Function volumePercentToI(STRING str)
+{   
+	INTEGER fraction;                      
+	fraction = byte(str,3)*256+byte(str,4);
+	if(fraction > 32767){
+		volume = ((byte(str, 2)+1)*65535)/100;                  
+	}
+	else{
+		volume = (byte(str, 2)*65535)/100;
+	}
+	returnI = volume;
+
+    Return (returnI);
+}
+
+String_Function fPad(STRING fsPad)
+{
+	INTEGER fiA;
+	
+	STRING fsReturn[10];
+	
+	fsReturn = "";
+	for(fiA = 1 to len(fsPad))
+	{
+		if (byte(fsPad, fiA) = 2 || byte(fsPad, fiA) = 3 || byte(fsPad, fiA) = 6 || byte(fsPad, fiA) = 21 || byte(fsPad, fiA) = 27)
+		{     
+			makeString(fsReturn, "%s\x1B%s", fsReturn, chr(byte(fsPad, fiA) + 128));
+		}               
+		else
+		{
+			makeString(fsReturn, "%s%s", fsReturn, chr(byte(fsPad, fiA)));
+		}
+	}
+	return(fsReturn);
+}
+
+String_Function fUnpad(STRING str2)
+{
+	INTEGER j;
+	STRING receiveString[100];
+	
+	receiveString = "";
+	for (j = 1 to len(str2))
+	{
+		if (byte(str2, j) = 27)
+		{
+			receiveString = receiveString + chr(byte(str2, j+1)-128);	
+			j = j+1;
+		} 
+		else
+		{
+			receiveString = receiveString + chr(byte(str2, j));
+		}
+	}    
+	while (byte(receiveString, 1) = 6)
+	{
+		receiveString = right(receiveString, len(receiveString)-1);
+	}
+	return (receiveString);
+}
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+PUSH output_mute$
+{                                  
+	stateVarOnOff = getLastModifiedArrayIndex();   
+	stateVarOnOff = ((stateVarOnOff-1)*128) + (input-1);
+	makeString(sTempSend, "\x88%s\x03%s%s%s\x00\x00\x00\x01", sNode, objectID$, chr(high(stateVarOnOff)), chr(low(stateVarOnOff)));
+	tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+
+   	if(subscribe)
+	{
+  		makeString(sTempSend, "\x89%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarOnOff)), chr(low(stateVarOnOff)));  //ON
+		tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+		processlogic();
+	}  
+}
+
+RELEASE output_mute$
+{  
+	stateVarOnOff = getLastModifiedArrayIndex(); 
+	stateVarOnOff = ((stateVarOnOff-1)*128) + (input-1);
+	makeString(sTempSend, "\x88%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarOnOff)), chr(low(stateVarOnOff)));
+	tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+
+   	if(subscribe)
+	{
+  		makeString(sTempSend, "\x89%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarOnOff)), chr(low(stateVarOnOff)));  //OFF
+		tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+		processlogic();
+	}
+}
+
+CHANGE output_gain$
+{                          
+	x = getLastModifiedArrayIndex();
+
+	if(volumeOutput[x] <> output_gain$[x])
+	{   
+		if(xOkGain[x])
+		{            
+			xOkGain[x] =0;
+		  	stateVarGain = 16384 + (((x-1)*128) + (input-1));
+//print("\nSV %02X", stateVarGain);
+	  		volumeOutput[x] = output_gain$[x];
+			output_gain_fb$[x] = output_gain$[x];
+	
+			makeString(sTempSend, "\x8D%s\x03%s%s%s%s", sNode, objectID$, chr(high(stateVarGain)), chr(low(stateVarGain)), iToVolumePercent(output_gain$[x]));
+			tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+			xOkGain[x]=1;
+		}
+	}
+}
+
+PUSH subscribe$
+{              
+	wait(20)
+	{  
+		if(xOKSubscribe)
+		{
+			xOKSubscribe = 0;
+			stateVarSub = input-1;
+			for (i = 1 to iMAXOUTPUT)
+			{   
+				stateVarSub = input-1 + ((i-1) * 128);
+				makeString(sTempSend, "\x89%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarSub)), chr(low(stateVarSub)));  //ON OFF
+				tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+				processlogic();
+
+				stateVarSub = stateVarSub + 16384;
+				makeString(sTempSend, "\x8E%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarSub)), chr(low(stateVarSub))); //GAIN
+				tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+			    processlogic();
+				delay(5);
+			}
+			subscribe = 1; 
+			xOKSubscribe = 1; 
+		}
+	}
+}  
+
+PUSH unSubscribe$
+{ 
+	if(xOKSubscribe)
+	{
+		xOKSubscribe = 0;
+		stateVarSub = input-1;
+		for (i = 1 to iMAXOUTPUT)
+		{   
+			stateVarSub = input-1 + ((i-1) * 128);
+			makeString(sTempSend, "\x8A%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarSub)), chr(low(stateVarSub)));  //ON OFF
+			tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+			processlogic();
+
+			stateVarSub = stateVarSub + 16384;
+			makeString(sTempSend, "\x8F%s\x03%s%s%s\x00\x00\x00\x00", sNode, objectID$, chr(high(stateVarSub)), chr(low(stateVarSub))); //GAIN
+			tx$ = send(sTempSend) + "\x03\x03\x03\x03";
+			processlogic();	
+			delay(5);
+		}
+		subscribe = 0;   
+		xOKSubscribe = 1;
+	}
+}
+
+change input$
+{
+	if(input$ > 0)
+	{
+		input = input$;
+	}
+	else       
+	{
+		input = 1;
+//		print ("error input for the automixer cannot be 0. set to default of 1");
+	}
+}
+
+function ProcessRxMessage(string paramData)
+{
+	if(find("Send Name", paramData) > 0)
+	{
+		iTempNum = atoi(paramData);
+		iMarker1 = find("Node ", paramData) + 5;
+		sNode = mid(paramData, iMarker1, 2);
+		sObjectIDPadded = fPad(objectID$);
+		makestring(tx$, "Send Name%d = %s\x03\x03\x03\x03\x03", iTempNum, sObjectIDPadded);
+	}
+	else if((mid(paramData, 7, 3) = "\x00\x00\x00") || (mid(paramData, 7, len(sObjectIDPadded)) = sObjectIDPadded))
+	{
+		paramData = fUnpad(paramData);
+		stateVarReceive = (byte(paramData, 9) * 256) + byte(paramData, 10);
+		if ((stateVarReceive MOD 128) = input-1)
+		{
+			if (stateVarReceive < 16384)
+			{                     
+				if (byte(paramData, 14))
+				{
+					//output_mute_fb$[(stateVarReceive / 128) + 49] = 0;														
+					output_mute_fb$[(stateVarReceive / 128) + 1] = 1;							
+				}
+				else
+				{
+					output_mute_fb$[(stateVarReceive / 128) + 1] = 0;							
+					//output_mute_fb$[(stateVarReceive / 128) + 49] = 1;							
+				}
+			}   
+			else
+			{ 
+				stateVarReceive = ((stateVarReceive - 16384) / 128) + 1;
+				volumeOutput[x] = volumePercentToI(mid(paramData, 11, 4));
+				output_gain_fb$[stateVarReceive] = volumeOutput[x];						
+			}
+		}
+	}
+}
+#if_series3
+THREADSAFE CHANGE rx$
+{
+	while(1)
+	{         
+		try
+		{
+			tempString = "";
+			tempString = gather("\x03\x03\x03\x03\x03", rx$);
+			tempString = left(tempString, len(tempString) - 4);
+			ProcessRxMessage(tempString);
+		}
+		catch
+		{
+			generateusernotice("BSS SoundWeb London Matrix Mixer Error: %s", getexceptionmessage());
+		}
+	}    	
+}
+#else
+integer semaphore;
+CHANGE rx$
+{
+	if(semaphore = 0)
+	{
+		semaphore = 1;
+		while(1)
+		{         
+			tempString = "";
+			tempString = gather("\x03\x03\x03\x03\x03", rx$);
+			tempString = left(tempString, len(tempString) - 4);
+			ProcessRxMessage(tempString);
+		}
+		semaphore = 1;
+	}
+}
+#endif
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+Function Main()
+{     
+	subscribe = 0;  
+	for(i = 1 to MAXOUTPUT)
+	{
+	 	xOkGain[i] = 1;
+	} 
+	xOKSubscribe =1;
+#if_series2
+	semaphore = 0;
+#endif
+}

@@ -1,0 +1,260 @@
+/*******************************************************************************************
+  SIMPL+ Module Information
+  (Fill in comments below)
+*******************************************************************************************/
+/*
+Dealer Name:	Crestron Electronics, Inc.
+System Name:
+System Number:
+Programmer:		PAC
+Comments:
+*/
+/*******************************************************************************************
+  Compiler Directives
+  (Uncomment and declare compiler directives as needed)
+*******************************************************************************************/
+#SYMBOL_NAME "BSS SoundWeb London Node v5.4 Driver"
+// #HINT ""
+#DEFINE_CONSTANT	csENDCHARS		"\x03\x03\x03\x03"
+#DEFINE_CONSTANT	csESCAPECHAR	"\x1B"
+
+#DEFINE_CONSTANT	ciMAXOBJECTIDS	50
+// #CATEGORY ""
+#DEFAULT_VOLATILE
+// #DEFAULT_NONVOLATILE
+// #HELP_PDF_FILE "bss soundweb london node v5.0 help.pdf"
+#ENABLE_STACK_CHECKING
+// #ENABLE_TRACE
+
+#HELP_BEGIN
+	This module is for use inside the BSS SoundWeb London Node v5.4 module only.
+#HELP_END
+/*******************************************************************************************
+  DIGITAL, ANALOG and SERIAL INPUTS and OUTPUTS
+  (Uncomment and declare inputs and outputs as needed)
+*******************************************************************************************/
+DIGITAL_INPUT _skip_, Initialize;
+BUFFER_INPUT _skip_, comRx$[10000];
+BUFFER_INPUT modulesTx$[10000];
+
+DIGITAL_OUTPUT _skip_, Allow_Init, Initialize_Busy;
+STRING_OUTPUT comTx$;
+STRING_OUTPUT modulesRx$[ciMAXOBJECTIDS];
+/*******************************************************************************************
+  Parameters
+  (Uncomment and declare parameters as needed)
+*******************************************************************************************/
+STRING_PARAMETER node$[2];
+/*******************************************************************************************
+  Parameter Properties
+  (Uncomment and declare parameter properties as needed)
+*******************************************************************************************/
+#BEGIN_PARAMETER_PROPERTIES node$
+   propValidUnits = unitString;
+   propDefaultUnit = unitString;
+   //propBounds = lower_bound , upper_bound;
+   propDefaultValue = "\x00\x00";
+   #BEGIN_PROP_FULL_DESCRIPTION
+    "see help document"
+   #END_PROP_FULL_DESCRIPTION
+   // #BEGIN_PROP_NOTES line_1...  line_2...  line_n  #END_PROP_NOTES
+#END_PARAMETER_PROPERTIES
+/*******************************************************************************************
+  Global Variables
+  (Uncomment and declare global variables as needed)
+  Note:  Be sure to initialize all declared STRING variables as needed
+         For example, in Function Main: myString = "";
+*******************************************************************************************/
+INTEGER iMarker1, iMarker2, iTemp;
+STRING sTempString1[800], sTempString2[800];
+STRING sObjectIDs[ciMAXOBJECTIDS][6];
+/*******************************************************************************************
+  Functions
+  (Add any additional functions here)
+  Note:  Functions must be physically placed before the location in
+         the code that calls them.
+*******************************************************************************************/
+Function fInitTimeOut()
+{
+	wait(1000)
+	{
+		Initialize_Busy = 0;
+	}
+}
+
+Function fSendFromDevice(STRING fsTempSend)
+{
+	INTEGER fiA, fiCount;
+	STRING  fsTempObjectID[10];
+
+	fsTempObjectID = mid(fsTempSend, 7, 6);
+	fiCount = 0;
+	for(fiA = 1 to 6)
+	{
+		if((byte(fsTempObjectID, fiA) = 0x1B) && (((fiCount = 0) && (fiA <=3)) || (fiCount > 0)))
+		{
+			fiCount = fiCount + 1;
+		}
+		else if((fiA > 3) && (fiCount = 0))
+		{
+			break;
+		}
+	}
+	fsTempObjectID = left(fsTempObjectID, fiCount + 3);
+	if(fsTempObjectID = "\x00\x00\x00")
+	{
+		for(fiA = 1 to ciMAXOBJECTIDS)
+		{
+			modulesRx$[fiA] = fsTempSend;
+		}
+	}
+	else
+	{
+		for(fiA = 1 to ciMAXOBJECTIDS)
+		{
+			if((len(sObjectIDs[fiA]) > 0) && (sObjectIDs[fiA] = fsTempObjectID))
+			{
+				modulesRx$[fiA] = fsTempSend + csENDCHARS;
+				break;
+			}
+		}
+	}
+}
+/*******************************************************************************************
+  Event Handlers
+  (Uncomment and declare additional event handlers as needed)
+*******************************************************************************************/
+PUSH Initialize
+{
+	integer a;
+	Initialize_Busy = 1;
+	setarray(sObjectIDs, "");
+	fInitTimeOut();
+	for(a = 1 to ciMAXOBJECTIDS)
+	{
+		makestring(modulesRx$[a], "Send Name%d Node %s\x03%s", a, node$, csENDCHARS);
+	}
+}
+
+#if_Series3
+THREADSAFE CHANGE modulesTx$
+{
+	while(1)
+	{
+		try
+		{
+			sTempString1 = "";
+			sTempString1 = gather("\x03\x03\x03\x03\x03", modulesTx$);
+			sTempString1 = left(sTempString1, len(sTempString1) - 4);
+			if(find("Send Name", sTempString1) > 0)
+			{
+				iTemp = atoi(sTempString1);
+				iMarker1 = find("= ", sTempString1) + 2;
+				iMarker2 = find("\x03", sTempString1, iMarker1);
+				if((iTemp <= ciMAXOBJECTIDS) && (iTemp > 0))
+				{
+					sObjectIDs[iTemp] = mid(sTempString1, iMarker1, iMarker2 - iMarker1);
+				}
+			}
+			else
+			{
+				comTx$ = sTempString1;
+			}
+		}
+		catch
+		{
+			generateusernotice("BSS SoundWeb London Node: Error from modules: %s", getexceptionmessage());
+		}
+	}
+}
+
+THREADSAFE CHANGE comRx$
+{
+	while(1)
+	{
+		try
+		{
+			sTempString2 = "";
+			sTempString2 = gather("\x03", comRx$);
+			while(byte(sTempString2, 1) = 0x06)
+			{
+				sTempString2 = right(sTempString2, len(sTempString2) - 1);
+			}
+			if(mid(sTempString2, 3, 2) = node$)
+			{
+				fSendFromDevice(sTempString2);
+			}
+		}
+		catch
+		{
+			generateusernotice("BSS SoundWeb London Node: Error from device: %s", getexceptionmessage());
+		}
+	}
+}
+#else
+integer semaphore, semaphore1;
+CHANGE modulesTx$
+{
+	if(semaphore = 0)
+	{
+		semaphore = 1;
+		while(1)
+		{
+			sTempString1 = "";
+			sTempString1 = gather("\x03\x03\x03\x03\x03", modulesTx$);
+			sTempString1 = left(sTempString1, len(sTempString1) - 4);
+			if(find("Send Name", sTempString1) > 0)
+			{
+				iTemp = atoi(sTempString1);
+				iMarker1 = find("= ", sTempString1) + 2;
+				iMarker2 = find("\x03", sTempString1, iMarker1);
+				if((iTemp <= ciMAXOBJECTIDS) && (iTemp > 0))
+				{
+					sObjectIDs[iTemp] = mid(sTempString1, iMarker1, iMarker2 - iMarker1);
+				}
+			}
+			else
+			{
+				comTx$ = sTempString1;
+			}
+		}
+		semaphore = 0;
+	}
+}
+
+CHANGE comRx$
+{
+	if(semaphore1 = 0)
+	{
+		semaphore1 = 1;
+		while(1)
+		{
+			sTempString2 = "";
+			sTempString2 = gather("\x03", comRx$);
+			while(byte(sTempString2, 1) = 0x06)
+			{
+				sTempString2 = right(sTempString2, len(sTempString2) - 1);
+			}
+			
+			if(mid(sTempString2, 3, 2) = node$)
+			{
+				fSendFromDevice(sTempString2);
+			}
+		}
+		semaphore1 = 0;
+	}
+}
+#endif
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+Function Main()
+{
+	waitforinitializationcomplete();
+#if_series2
+	semaphore = 0;
+	semaphore1 = 0;
+#endif
+}

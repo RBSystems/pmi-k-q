@@ -1,0 +1,8 @@
+1) CDD6 x 4 (2 Amp Ch) 1, 2
+2) CDD6 x 8 (4 Amp Ch) 3, 4, 5, 6
+3) CDD8 x 2 (1 Amp Ch) 7
+4) CDD8 x 2 (1 Amp Ch) 8
+5) Sub South - RCF18 HP40 LP100 BUT18 (1 Amp Ch) 13
+6) Sub North - RCF18 HP40 LP100 BUT18 (1 Amp Ch) 14
+7) CDD8 x 2 (1 Amp Ch) 9
+8) CDD8 x 2 (1 Amp Ch) 10
